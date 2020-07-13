@@ -1,0 +1,36 @@
+prefix: baseline-noerase-s16-40-60-224
+
+fp16: true
+
+#dataset
+batch_size: 128
+joint_training: false
+
+source_dataset: duke
+target_dataset: duke
+
+# architecture
+drop_last_stride: true
+
+# optimizer
+new_params_lr: 0.05
+ft_lr: 0.01
+optimizer: sgd
+num_epoch: 60
+lr_step: [40]
+image_size: [224,224]
+
+
+# augmentation
+random_flip: true
+random_crop: true
+random_erase: false
+color_jitter: false
+padding: 10
+
+
+# log
+eval_interval: 10
+
+
+

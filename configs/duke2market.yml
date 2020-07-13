@@ -1,0 +1,60 @@
+prefix: duke2market-all-eps0.8-mix0.6-closest
+
+fp16: true
+
+
+# cross-domain mix-up
+mix: true
+alpha: 0.6
+
+
+# neighborhood constraint
+neighbor_mode: 1   # 0: camera-agnostic neighborhood; 1: camera-aware neighborhood
+neighbor_eps: 0.8
+
+scale: 10
+
+
+#dataset
+batch_size: 256
+joint_training: true
+
+source_dataset: duke
+target_dataset: market
+
+
+# architecture
+drop_last_stride: true
+
+# optimizer
+new_params_lr: 0.05
+ft_lr: 0.01
+optimizer: sgd
+num_epoch: 70
+lr_step: [60]
+
+# augmentation
+random_flip: true
+random_crop: true
+random_erase: true
+color_jitter: false
+padding: 10
+
+
+# log
+eval_interval: 10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
