@@ -102,8 +102,7 @@ def train(cfg):
                   scale=cfg.scale,
                   mix=cfg.mix,
                   alpha=cfg.alpha)
-    # model.backbone.load_state_dict(torch.load('../test/checkpoints/market/baseline-noerase-s16-rot224/baseline-noerase-s16-rot224_model_30.pth',map_location=torch.device('cpu')),strict=False)
-    # model.backbone.load_state_dict(torch.load('../test/checkpoints/market/baseline-noerase-s16-instance/baseline-noerase-s16-instance_model_190.pth',map_location=torch.device('cpu')),strict=False)
+
     model.cuda()
 
     # optimizer
@@ -113,7 +112,6 @@ def train(cfg):
                     {'params': new_params, 'lr': cfg.new_params_lr}]
 
     optimizer = optim.SGD(param_groups, momentum=0.9, weight_decay=cfg.wd)
-    # optimizer = optim.Adam(param_groups, weight_decay=cfg.wd)
 
     # convert model for mixed precision distributed training
 

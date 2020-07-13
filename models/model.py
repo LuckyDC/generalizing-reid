@@ -98,9 +98,9 @@ class Model(nn.Module):
             if not self.mix or epoch <= 1:
                 loss, metric = self.source_train_forward(feat_s, label_s)
             else:
-                loss, metric = self.mixed_st_forward(feat_s, label_s, **kwargs)    
-                
-            # target task
+                loss, metric = self.mixed_st_forward(feat_s, label_s, **kwargs)
+
+                # target task
             feat_t = self.bn_neck(input_t)
             target_loss, target_metric = self.target_train_forward(feat_t, **kwargs)
 
@@ -217,8 +217,8 @@ class Model(nn.Module):
     def cam_agnostic_eps_nn_loss(self, sim, img_ids):
         mask_instance = torch.zeros_like(sim)
         mask_instance[torch.arange(sim.size(0)), img_ids] = 1
-        
-        sim_neighbor = (sim.data + 1) * (1 - mask_instance) -1
+
+        sim_neighbor = (sim.data + 1) * (1 - mask_instance) - 1
         nearest = sim_neighbor.max(dim=1, keepdim=True)[0]
         neighbor_mask = torch.gt(sim_neighbor, nearest * self.neighbor_eps)
         num_neighbor = neighbor_mask.sum(dim=1)

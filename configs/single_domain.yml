@@ -1,4 +1,4 @@
-prefix: baseline-noerase-s16-40-60-224
+prefix: baseline-single-domain
 
 fp16: true
 
@@ -16,15 +16,15 @@ drop_last_stride: true
 new_params_lr: 0.05
 ft_lr: 0.01
 optimizer: sgd
-num_epoch: 60
-lr_step: [40]
-image_size: [224,224]
+num_epoch: 70
+lr_step: [60]
+
 
 
 # augmentation
 random_flip: true
 random_crop: true
-random_erase: false
+random_erase: true
 color_jitter: false
 padding: 10
 
