@@ -27,7 +27,7 @@ You can also evaluate the trained model manually by running:
 python3 eval.py GPU_ID PATH_TO_CHECKPOINT_FILE [--dataset DATASET]
 ```
 
-`PATH_TO_CHECKPOINT_FILE` is the path to the checkpoint file of the trained model. As an intermediate product, the feature matrix of target images is stored in the `./features` directory.
+`PATH_TO_CHECKPOINT_FILE` is the path to the checkpoint file of the trained model. `DATASET` is the name of the target dataset. Its value can be `{market,duke,cuhk,msmt}`. As an intermediate product, the feature matrix of target images is stored in the `./features` directory.
 
 
 
