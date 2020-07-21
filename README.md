@@ -29,8 +29,14 @@ python3 eval.py GPU_ID PATH_TO_CHECKPOINT_FILE [--dataset DATASET]
 
 `PATH_TO_CHECKPOINT_FILE` is the path to the checkpoint file of the trained model. `DATASET` is the name of the target dataset. Its value can be `{market,duke,cuhk,msmt}`. As an intermediate product, the feature matrix of target images is stored in the `./features` directory.
 
+## Citation
 
-
+	@inproceedings{luo2020generalizing,
+	  title={Generalizing Person Re-Identification by Camera-Aware Invariance Learning and Cross-Domain Mixup},
+	  author={Luo, Chuanchen and Song, Chunfeng and Zhang, Zhaoxiang},
+	  booktitle={European Conference on Computer Vision},
+	  year={2020}
+	}
 
 
 
