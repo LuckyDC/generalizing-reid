@@ -159,11 +159,6 @@ if __name__ == '__main__':
     parser.add_argument("--local_rank", type=int, default=None)
     args = parser.parse_args()
 
-    # set random seed
-    seed = 0 if args.local_rank is None else args.local_rank
-    torch.manual_seed(seed)
-    torch.cuda.manual_seed(seed)
-
     # enable cudnn backend
     if args.local_rank is not None:
         torch.cuda.set_device(args.local_rank)
