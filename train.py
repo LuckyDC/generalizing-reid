@@ -161,9 +161,6 @@ if __name__ == '__main__':
 
     # set random seed
     seed = 0 if args.local_rank is None else args.local_rank
-    random.seed(seed)
-    np.random.RandomState(seed)
-    np.random.seed(seed)
     torch.manual_seed(seed)
     torch.cuda.manual_seed(seed)
 
