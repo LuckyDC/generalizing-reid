@@ -5,7 +5,7 @@ Implementation of ECCV2020 paper [*Generalizing Person Re-Identification by Came
 * python 3.6
 * pytorch 1.3
 * [apex](https://github.com/NVIDIA/apex)
-* [ignite](https://github.com/pytorch/ignite)
+* [ignite](https://github.com/pytorch/ignite) 0.2.0
 
 ## Preparation
 Download and extract Market-1501, DukeMTMC-reID, CUHK03 and MSMT17. 
