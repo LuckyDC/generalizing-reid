@@ -1,5 +1,5 @@
 # Generalizing Person Re-identification
-Implementation of ECCV2020 paper *Generalizing Person Re-Identification by Camera-Aware Instance Learning and Cross-Domain Mixup*.
+Implementation of ECCV2020 paper [*Generalizing Person Re-Identification by Camera-Aware Instance Learning and Cross-Domain Mixup*](https://www.ecva.net/papers/eccv_2020/papers_ECCV/html/2329_ECCV_2020_paper.php).
 
 ## Dependencies
 * python 3.6
